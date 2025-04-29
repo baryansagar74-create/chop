@@ -1,0 +1,166 @@
+<html><head><style>
+*{
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 1ch;
+  height: 100dvh;
+  white-space: pre-wrap;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+header{
+  border-bottom:1px solid #000;
+}
+footer{
+  border-top:1px solid #000;
+}
+main{
+  flex-grow: 1;
+  overflow-y:auto;
+}
+</style><title>Changelog</title></head>
+<body><header><a href=index.html>Tool</a> CHANGELOG
+</header><main>
+2025_0429
+Wraps app in function
+
+2025_0428
+Strips "Guess Table" mode
+Tweaks comments
+Re-styles frontend
+
+2025_0317
+Adds "Guess Table" mode for borderless tables [Unreliable].
+Splits box when user clicks outside current box in "Score" mode.
+Removes separate button for 'split'.
+Improves "score" function. draws X+Y lines if mouse within box.
+Improves click or drag detector.
+Added noscript alert message.
+Adds "save tables" and saves tables JSON and CSV files.
+Removes feature to show title text in footer on element hover.
+Shows title text on hover near element only.
+Updates About text.
+
+2025_0316
+Swaps OCR buttons for an OCR mode. Click box to OCR that area.
+Reviews changelog.
+Pads image area on frontend.
+Makes footer ever present and shows notifications there.
+Adds faster tooltip on mouseover button.
+<!-- first publication -->
+
+2025_0315
+Generates the 'mode' menu radio button via JS.
+Adds copy mode to the mode menu, to copy OCR'd text in any box.
+
+2025_0314
+Creates a nested div structure when creating html file.
+- puts any box inside any other whose area covers it entirely.
+Adds option to mark a box as a holder, one that contains others.
+- ignores 'holder' boxes when OCR'ing and exporting images.
+Allows clicking boxes within holder boxes.
+- makes a box the back-most item when marking it as a holder.
+
+2025_0313
+Adds toolbar and moves tools.
+Names most tools with 'single syllable when plural' verbs.
+Unifies 'split' buttons and now acts based on context.
+Adds checkerboard svg behind popovers.
+Adds a license popover.
+Adds an about popover.
+Preserves a box if the 'shrink to content' tool finds nothing.
+Lets user click the image to apply current tool to all boxes.
+Merges '2 click draw' & 'drag to draw' into 1 mode.
+
+2025_0312
+Only unwraps text in boxes marked as &lt;p>.
+Produces a flexbox based layout as well as the absolute one.
+Adds 'shrink all boxes to fit' button. for a quicker workflow.
+Auto OCR's all boxes on save, that lack user added / OCR'd text.
+Prevents font size reducing below 5px on downsizing large pages.
+
+2025_0311
+Adds date stamps to archive file names.
+Adds more element kinds (small, pre, textarea, fieldset).
+Converts boxes to elements of the type the user marked them as.
+Produces a plain html file sans css, as well as one with css.
+Scales the output to match area of a4 paper at 96dpi.
+- handles cases where a scan is very low or high resolution.
+Centers content (based on bounds) to center of canvas on save.
+Remove leading & trailing lines from OCR'd text.
+Removes hard wrapped lines from OCR'd text.
+Makes the most occurring font size the main font size.
+
+2025_0309
+Removes path based features.
+Removes svg drawing features (replaced with html).
+Adds 'draw guidelines/split lines' to box then split.
+Draws tables on the user preview (vs converting boxes later).
+Uses the live drawing area to hold the output html.
+Deletes redundant standalone preview area feature.
+Removes most svg related code.
+Adds a 'surrounding area' box around grid/tables created.
+Makes both split functions share the same logic and code.
+Shrinks all boxes to fit the content they frame in the image.
+Adds 'detect bounds' to draw a box that cover all image content.
+Adds a 'unify_font_sizes' function.
+
+2025_0307
+Adds draw a box tool (instead of add box, then resize).
+Uses HTML for drawing boxes instead of svg. Converts all tools.
+Groups tools in sidebar.
+Adds tools to align the text for the selected box.
+Detects font size by resizing OCRd text to fill box.
+Saves a single html file (vs zip) if output has no images.
+Adds a no-drag method to draw a box. click #1 starts, #2 stops.
+Adds more options for marking the kind of the current box.
+Adds a 'delete all boxes' button.
+
+2025_0304
+Adds a feature to detect and draw content areas within an image.
+Merges functions for handling 'enabled/disabled' button states.
+Adds 'delete clicked box' mod for quickly removing boxes.
+Adds 'delete all within selected rectangle' to save user time.
+Adds 'detect content areas in the image area a box covers'.
+Adds 'delete all rectangles' to clear canvas.
+
+2025_0302
+Adds option to save an image batch of boxes marked as images.
+Asks user if item is table when they split box to grid or table.
+Adds OCR text ability.
+Adds ocr'd text in boxes marked as images to their alt text
+Saves out a html file with inlined images (1 file contains all).
+Saves out html file and image files it reference (structure).
+Date stamps files created.
+
+2025_0301
+Adds option to add points to a selected box, and split by those.
+Adds 'merge' tool: swap 2 boxes with 1 that covers their bounds.
+Add window body listener for file drag drop to load a picture.
+Adds buttons to set intended kind of selected rect (img/p/b).
+Styles rectangles to suggest assigned kind.
+Slims some code.
+Makes a html layout using svg rectangle data.
+Offers a html layout preview.
+Stops moving a box when its bounds meet the current image edge.
+Stores data in the rectangles drawn.
+
+2025_0228
+Adds tool to draw a path with points.
+Make points moveable.
+Adds function to convert every 2 path points to a rectangle.
+Adds ability to delete path.
+Styles disabled buttons.
+Puts rectangles grid tools make into a group.
+Allows L shaped path of dots to create a grid or table of boxes.
+Offers to split selected rectangle into table.
+Adds a form to split a box into a grid. fields: cols, rows, gap.
+Give rectangles in table id to parse later tableN-RowN-ColN.
+Produce rectangles in order-to-read when making tables or grids.
+</main><footer><a href=index.html>Tool</a> By + Copyright <a
+href=https://gregabbott.pages.dev>Greg Abbott</a> 2025</footer></body></html>
